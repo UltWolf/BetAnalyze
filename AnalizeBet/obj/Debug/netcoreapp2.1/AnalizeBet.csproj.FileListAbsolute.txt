@@ -1,0 +1,14 @@
+C:\Users\ctrat\source\repos\AnalizeBet\AnalizeBet\bin\Debug\netcoreapp2.1\AnalizeBet.deps.json
+C:\Users\ctrat\source\repos\AnalizeBet\AnalizeBet\bin\Debug\netcoreapp2.1\AnalizeBet.runtimeconfig.json
+C:\Users\ctrat\source\repos\AnalizeBet\AnalizeBet\bin\Debug\netcoreapp2.1\AnalizeBet.runtimeconfig.dev.json
+C:\Users\ctrat\source\repos\AnalizeBet\AnalizeBet\bin\Debug\netcoreapp2.1\AnalizeBet.dll
+C:\Users\ctrat\source\repos\AnalizeBet\AnalizeBet\obj\Debug\netcoreapp2.1\AnalizeBet.csprojAssemblyReference.cache
+C:\Users\ctrat\source\repos\AnalizeBet\AnalizeBet\obj\Debug\netcoreapp2.1\AnalizeBet.csproj.CoreCompileInputs.cache
+C:\Users\ctrat\source\repos\AnalizeBet\AnalizeBet\obj\Debug\netcoreapp2.1\AnalizeBet.RazorAssemblyInfo.cache
+C:\Users\ctrat\source\repos\AnalizeBet\AnalizeBet\obj\Debug\netcoreapp2.1\AnalizeBet.RazorAssemblyInfo.cs
+C:\Users\ctrat\source\repos\AnalizeBet\AnalizeBet\obj\Debug\netcoreapp2.1\AnalizeBet.AssemblyInfoInputs.cache
+C:\Users\ctrat\source\repos\AnalizeBet\AnalizeBet\obj\Debug\netcoreapp2.1\AnalizeBet.AssemblyInfo.cs
+C:\Users\ctrat\source\repos\AnalizeBet\AnalizeBet\obj\Debug\netcoreapp2.1\AnalizeBet.RazorTargetAssemblyInfo.cache
+C:\Users\ctrat\source\repos\AnalizeBet\AnalizeBet\bin\Debug\netcoreapp2.1\AnalizeBet.pdb
+C:\Users\ctrat\source\repos\AnalizeBet\AnalizeBet\obj\Debug\netcoreapp2.1\AnalizeBet.dll
+C:\Users\ctrat\source\repos\AnalizeBet\AnalizeBet\obj\Debug\netcoreapp2.1\AnalizeBet.pdb

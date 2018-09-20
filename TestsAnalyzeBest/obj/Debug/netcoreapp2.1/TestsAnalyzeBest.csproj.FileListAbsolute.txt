@@ -1,0 +1,14 @@
+c:\Users\ctrat\source\repos\AnalizeBet\TestsAnalyzeBest\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+c:\Users\ctrat\source\repos\AnalizeBet\TestsAnalyzeBest\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+c:\Users\ctrat\source\repos\AnalizeBet\TestsAnalyzeBest\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+c:\Users\ctrat\source\repos\AnalizeBet\TestsAnalyzeBest\bin\Debug\netcoreapp2.1\TestsAnalyzeBest.deps.json
+c:\Users\ctrat\source\repos\AnalizeBet\TestsAnalyzeBest\bin\Debug\netcoreapp2.1\TestsAnalyzeBest.runtimeconfig.json
+c:\Users\ctrat\source\repos\AnalizeBet\TestsAnalyzeBest\bin\Debug\netcoreapp2.1\TestsAnalyzeBest.runtimeconfig.dev.json
+c:\Users\ctrat\source\repos\AnalizeBet\TestsAnalyzeBest\bin\Debug\netcoreapp2.1\TestsAnalyzeBest.dll
+c:\Users\ctrat\source\repos\AnalizeBet\TestsAnalyzeBest\bin\Debug\netcoreapp2.1\TestsAnalyzeBest.pdb
+c:\Users\ctrat\source\repos\AnalizeBet\TestsAnalyzeBest\obj\Debug\netcoreapp2.1\TestsAnalyzeBest.csprojAssemblyReference.cache
+c:\Users\ctrat\source\repos\AnalizeBet\TestsAnalyzeBest\obj\Debug\netcoreapp2.1\TestsAnalyzeBest.csproj.CoreCompileInputs.cache
+c:\Users\ctrat\source\repos\AnalizeBet\TestsAnalyzeBest\obj\Debug\netcoreapp2.1\TestsAnalyzeBest.AssemblyInfoInputs.cache
+c:\Users\ctrat\source\repos\AnalizeBet\TestsAnalyzeBest\obj\Debug\netcoreapp2.1\TestsAnalyzeBest.AssemblyInfo.cs
+c:\Users\ctrat\source\repos\AnalizeBet\TestsAnalyzeBest\obj\Debug\netcoreapp2.1\TestsAnalyzeBest.dll
+c:\Users\ctrat\source\repos\AnalizeBet\TestsAnalyzeBest\obj\Debug\netcoreapp2.1\TestsAnalyzeBest.pdb
