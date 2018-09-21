@@ -15,6 +15,9 @@ namespace AnalizeBet.Services.Repositories
             throw new System.NotImplementedException();
         }
 
+         public decimal getProcent (ScoreMatches match ){
+          
+         }
         ScoreMatches IRepositories<ScoreMatches>.GetElement(string[] args)
         {
             throw new System.NotImplementedException();

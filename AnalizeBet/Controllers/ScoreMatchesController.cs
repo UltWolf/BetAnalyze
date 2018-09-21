@@ -15,16 +15,21 @@ namespace AnalizeBet.Controllers
     public class ScoreMatchesController : ControllerBase
     {
         private readonly ScoresContext _context;
+        private readonly ScoreRepository repository;
 
-        public ScoreMatchesController(ScoresContext context)
+        public ScoreMatchesController(ScoresContext context, IRepository _repository)
         {
             _context = context;
+            repository = _repository;
         }
 
         // GET: api/ScoreMatches
         [HttpGet]
-        public IEnumerable<ScoreMatches> GetScores()
+        public IEnumerable<ScoreMatches> GetScores([FromRoute] string href)
         {
+            if(href.Contains("www.myscore.com.ua")||href.Contains("www.myscore.com.ru")){
+                repository.GetScores();
+            }
             return _context.Scores;
         }
 
