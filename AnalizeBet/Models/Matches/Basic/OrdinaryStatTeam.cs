@@ -11,54 +11,61 @@ namespace AnalizeBet.Models.Matches.Basic {
             private readonly double? _offsides;
             private double? _yellowCards;
             public double? _redCards;
-            #endregion
-            //experimental method
-            public double EqualingForExecuteProcent (double? firstArgue, double? secondArgue, string statement) {
+        #endregion
+        //experimental method
+        public double EqualingForExecuteProcent(double? firstArgue, double? secondArgue, string statement) {
 
-                switch (statement) {
-                    case HaveBall:
-                        if (firstArgue - secondArgue <= -20) {
-                            return -2;
-                        } else if (firstArgue - secondArgue <= -10) {
-                            return -1;
-                        } else if ((firstArgue - secondArgue <= -10) && (firstArgue - secondArgue <= 10)) {
+            switch (statement) {
+                case "HaveBall":
+                    if (firstArgue - secondArgue <= -20) {
+                        return -2;
+                    } else if (firstArgue - secondArgue <= -10) {
+                        return -1;
+                    } else if ((firstArgue - secondArgue <= -10) && (firstArgue - secondArgue <= 10)) {
+                        return 0;
+                    } else if (firstArgue - secondArgue <= 10) {
+                        return 1;
+                    } else {
+                        return 2;
+                    }
+
+                case "HitsOnGoal":
+                    try
+                    {
+                        if (firstArgue / secondArgue < 1)
+                        {
                             return 0;
-                        } else if (firstArgue - secondArgue <= 10) {
+                        }
+                        else if (firstArgue / secondArgue < 2)
+                        {
                             return 1;
-                        } else {
-                            return 2;
                         }
+                        else { return 2; }
+                    }
+                    catch (System.DivideByZeroException er)
+                    {
+                        return 1;
+                    };
 
-                    case HitsOnGoal:
-                        try {
-                            if (firstArgue / secondArgue < 1) {
-                                return 0;
-                            } else if (firstArgue / secondArgue < 2) {
-                                return 1;
-                            } else { return 2; } catch (System.DivideByZeroException er) {
-                                return 1
-                            };
+                case "HitsInGoal":
+                    if (firstArgue / secondArgue < 1) {
+                        return 0;
+                    } else if (firstArgue / secondArgue < 2) {
+                        return 1;
+                    } else { return 2; }
 
-                            case HitsInGoal:
-                                if (firstArgue / secondArgue < 1) {
-                                    return 0;
-                                } else if (firstArgue / secondArgue < 2) {
-                                    return 1;
-                                } else { return 2; } catch (System.DivideByZeroException er) {
-                                    return 1
-                                };
-
-                            case redCards:
-                                if (firstArgue > secondArgue) {
-                                    return 2;
-                                } else if { firstArgue == secondArgue } {
-                                    return 1;
-                                } else {
-                                    return 0;
-                                }
-
-                        }
-                }
+                case "redCards":
+                    if (firstArgue > secondArgue) {
+                        return 2;
+                    } else if (firstArgue == secondArgue) {
+                        return 1;
+                    } else {
+                        return 0;
+                    }
+                  
+            }
+            return 0;
+        }
                 public OrdinaryStatTeam (double procentToHavingTimeBall, double? hitsInGoal,
                     double? hitsMiss, double? hitsOnGoal,
                     double? corners, double? saves, double? falls,
@@ -84,9 +91,9 @@ namespace AnalizeBet.Models.Matches.Basic {
                 private readonly static string _statementRedCards = "redCards";
 
                 public static double GetProcentToWin (this OrdinaryStatTeam firstTeam, OrdinaryStatTeam secondTeam) {
-                    procentToWinCurrent += firstTeam.EqualingForExecuteProcent (firstTeam._procentToHavingTimeBall, secondTeam._procentToHavingTimeBall, statementBall);
+                    procentToWinCurrent += firstTeam.EqualingForExecuteProcent (firstTeam._procentToHavingTimeBall, secondTeam._procentToHavingTimeBall, _statementBall);
                     procentToWinCurrent += firstTeam.EqualingForExecuteProcent (firstTeam._hitsOnGoal, secondTeam._hitsOnGoal, _statementHits);
-                    procentToWinCurrent += firstTeam.EqualingForExecuteProcent (firstTeam._redCards, secondTeam._redCardsl, _statementRedCards);
+                    procentToWinCurrent += firstTeam.EqualingForExecuteProcent (firstTeam._redCards, secondTeam._redCards, _statementRedCards);
                     return procentToWinCurrent;
                 }
             }

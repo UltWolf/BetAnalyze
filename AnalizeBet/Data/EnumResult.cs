@@ -7,8 +7,8 @@ namespace AnalizeBet.Data
 {
     public enum EnumResult
     {
-        win,
-        draw,
-        lose
+       Win  = 1,
+       Draw,
+       Lose
     }
 }

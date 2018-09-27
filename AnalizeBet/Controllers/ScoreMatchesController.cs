@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using AnalizeBet.Data;
 using AnalizeBet.Models;
+using AnalizeBet.Services.Repositories;
+using AnalizeBet.Services.Repositories.Basic;
+using AnalizeBet.Models.Authorization.UnLocal.MyScore;
 
 namespace AnalizeBet.Controllers
 {
@@ -15,9 +18,9 @@ namespace AnalizeBet.Controllers
     public class ScoreMatchesController : ControllerBase
     {
         private readonly ScoresContext _context;
-        private readonly ScoreRepository repository;
+        private readonly ScoreRepository<ScoreMatches> repository;
 
-        public ScoreMatchesController(ScoresContext context, IRepository _repository)
+        public ScoreMatchesController(ScoresContext context,   ScoreRepository<ScoreMatches> _repository)
         {
             _context = context;
             repository = _repository;
@@ -25,10 +28,10 @@ namespace AnalizeBet.Controllers
 
         // GET: api/ScoreMatches
         [HttpGet]
-        public IEnumerable<ScoreMatches> GetScores([FromRoute] string href)
+        public IEnumerable<ScoreMatches> GetScores([FromRoute] MyScoreRequest msc)
         {
-            if(href.Contains("www.myscore.com.ua")||href.Contains("www.myscore.com.ru")){
-                repository.GetScores();
+            if(msc.href.Contains("www.myscore.com.ua")||msc.href.Contains("www.myscore.com.ru")){
+                repository.GetScores(msc );
             }
             return _context.Scores;
         }

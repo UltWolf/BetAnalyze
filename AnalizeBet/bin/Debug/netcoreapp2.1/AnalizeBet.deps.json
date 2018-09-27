@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "289f965d5fd5dc07381b8c0fe014a933c80db666"
+    "signature": "1dda3ec9a4ded362e97e561d63976b73c97dc659"
   },
   "compilationOptions": {
     "defines": [
@@ -29,7 +29,8 @@
           "Microsoft.NETCore.App": "2.1.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.1.1",
           "NUnit": "3.10.1",
-          "Newtonsoft.Json": "11.0.2"
+          "Newtonsoft.Json": "11.0.2",
+          "RestSharp": "106.4.1"
         },
         "runtime": {
           "AnalizeBet.dll": {}
@@ -420,6 +421,17 @@
         },
         "compile": {
           "lib/netstandard2.0/nunit.framework.dll": {}
+        }
+      },
+      "RestSharp/106.4.1": {
+        "runtime": {
+          "lib/netstandard2.0/RestSharp.dll": {
+            "assemblyVersion": "106.4.1.0",
+            "fileVersion": "106.4.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/RestSharp.dll": {}
         }
       },
       "System.Composition/1.0.31": {
@@ -3684,6 +3696,13 @@
       "sha512": "sha512-E3ii6+VLdeIxTQ5gPjk/7g/xl+aCifbfcIkiGayZCuos+22FEdtKGrxMe6SzoXCQCcL7gdqhfNIFTaZ1+dS18g==",
       "path": "nunit/3.10.1",
       "hashPath": "nunit.3.10.1.nupkg.sha512"
+    },
+    "RestSharp/106.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VRxJs40Pg9E0uHA+4/DYQwhP6Jvr7b+2bEOoop/k9hBrRtqtZW2M1r2snB9CummnZB3/JtS0ZAvs23oQFra4sQ==",
+      "path": "restsharp/106.4.1",
+      "hashPath": "restsharp.106.4.1.nupkg.sha512"
     },
     "System.Composition/1.0.31": {
       "type": "package",

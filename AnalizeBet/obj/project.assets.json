@@ -2850,6 +2850,15 @@
           "lib/netstandard1.0/Remotion.Linq.dll": {}
         }
       },
+      "RestSharp/106.4.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/RestSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/RestSharp.dll": {}
+        }
+      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
@@ -7680,6 +7689,20 @@
         "remotion.linq.nuspec"
       ]
     },
+    "RestSharp/106.4.1": {
+      "sha512": "VRxJs40Pg9E0uHA+4/DYQwhP6Jvr7b+2bEOoop/k9hBrRtqtZW2M1r2snB9CummnZB3/JtS0ZAvs23oQFra4sQ==",
+      "type": "package",
+      "path": "restsharp/106.4.1",
+      "files": [
+        ".signature.p7s",
+        "lib/net452/RestSharp.dll",
+        "lib/net452/RestSharp.xml",
+        "lib/netstandard2.0/RestSharp.dll",
+        "lib/netstandard2.0/RestSharp.xml",
+        "restsharp.106.4.1.nupkg.sha512",
+        "restsharp.nuspec"
+      ]
+    },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "sha512": "HdSSp5MnJSsg08KMfZThpuLPJpPwE5hBXvHwoKWosyHHfe8Mh5WKT0ylEOf6yNzX6Ngjxe4Whkafh5q7Ymac4Q==",
       "type": "package",
@@ -12475,7 +12498,8 @@
       "Microsoft.NETCore.App >= 2.1.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.1",
       "NUnit >= 3.10.1",
-      "Newtonsoft.Json >= 11.0.2"
+      "Newtonsoft.Json >= 11.0.2",
+      "RestSharp >= 106.4.1"
     ]
   },
   "packageFolders": {
@@ -12545,6 +12569,10 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[11.0.2, )"
+          },
+          "RestSharp": {
+            "target": "Package",
+            "version": "[106.4.1, )"
           }
         },
         "imports": [
