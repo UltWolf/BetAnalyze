@@ -65,6 +65,26 @@ namespace AnalizeBet.Services.Repositories
         }
 
 
+        public float getTotalProcentForWin(float[] procents ) {
+            if (procents[0] < procents[1])
+            {
+                procents[0] -= 10;
+            }
+            else
+            {
+                procents[0] += 10;
+            }
+            if (procents.Length  >= 3)
+            {
+                if (procents[0] > procents[2])
+                {
+
+                    procents[0] += 10;
+                }
+            }
+            return procents[0];
+
+            }
         private List<Models.ScoreMatches> GetListScoreFromTemplate( IElement template) {
 
             List<Models.ScoreMatches> ListResult = new List<Models.ScoreMatches>(); 
@@ -86,8 +106,49 @@ namespace AnalizeBet.Services.Repositories
 
         }
         
-        public decimal GetProcent (ScoreMatches match ){
-            throw new System.NotImplementedException();
+        public float GetProcent (List<Models.ScoreMatches> scores,string nameTeam ){
+ 
+            float win = 0;
+            float draw = 0;
+            float loose = 0;
+            foreach (var score in scores)
+            {
+                if (score.FirstTeam == nameTeam)
+                {
+                    if (score.FirstScore > score.SecondScore)
+                    {
+                        win += 1;
+                    }
+                    else if (score.FirstScore == score.SecondScore)
+                    {
+
+                        draw += 1;
+                    }
+                    else {
+
+                        loose += 1;
+                    }
+                     
+                }
+                else {
+                    if (score.FirstScore > score.SecondScore)
+                    {
+                       loose += 1;
+                    }
+                    else if (score.FirstScore == score.SecondScore)
+                    {
+
+                        draw += 1;
+                    }
+                    else
+                    {
+
+                        win += 1;
+                    }
+                }
+            }
+            float procentToWin = (win / scores.Count) * 100  ;
+            return procentToWin;
         }
         public  ScoreMatches GetElement(string[] args)
         {
