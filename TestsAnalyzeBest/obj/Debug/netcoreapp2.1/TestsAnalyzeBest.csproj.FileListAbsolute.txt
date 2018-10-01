@@ -12,3 +12,6 @@ c:\Users\ctrat\source\repos\AnalizeBet\TestsAnalyzeBest\obj\Debug\netcoreapp2.1\
 c:\Users\ctrat\source\repos\AnalizeBet\TestsAnalyzeBest\obj\Debug\netcoreapp2.1\TestsAnalyzeBest.AssemblyInfo.cs
 c:\Users\ctrat\source\repos\AnalizeBet\TestsAnalyzeBest\obj\Debug\netcoreapp2.1\TestsAnalyzeBest.dll
 c:\Users\ctrat\source\repos\AnalizeBet\TestsAnalyzeBest\obj\Debug\netcoreapp2.1\TestsAnalyzeBest.pdb
+C:\Users\ctrat\source\repos\AnalizeBet\TestsAnalyzeBest\bin\Debug\netcoreapp2.1\AnalizeBet.dll
+C:\Users\ctrat\source\repos\AnalizeBet\TestsAnalyzeBest\bin\Debug\netcoreapp2.1\AnalizeBet.pdb
+C:\Users\ctrat\source\repos\AnalizeBet\TestsAnalyzeBest\obj\Debug\netcoreapp2.1\TestsAnalyzeBest.csproj.CopyComplete
