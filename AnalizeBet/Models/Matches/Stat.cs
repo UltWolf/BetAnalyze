@@ -12,6 +12,15 @@ namespace AnalizeBet.Models.Matches {
             this.secondTeam = st;
             ProcentToStartMatch = Procent;
         }
+        public Stat(OrdinaryStatTeam ft, OrdinaryStatTeam st  )
+        {
+            this.firstTeam = ft;
+            this.secondTeam = st;
+            
+        }
 
+        public Stat()
+        {
+        }
     }
 }

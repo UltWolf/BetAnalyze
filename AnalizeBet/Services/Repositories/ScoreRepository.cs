@@ -10,6 +10,7 @@ using System.Linq;
 using RestSharp;
 using System.Collections.Generic;
 using AngleSharp.Dom;
+using AnalizeBet.Services.Extensions;
 
 namespace AnalizeBet.Services.Repositories
 {
@@ -64,7 +65,6 @@ namespace AnalizeBet.Services.Repositories
             
         }
 
-
         public float getTotalProcentForWin(float[] procents ) {
             if (procents[0] < procents[1])
             {
@@ -82,7 +82,15 @@ namespace AnalizeBet.Services.Repositories
                     procents[0] += 10;
                 }
             }
-            return procents[0];
+            if (procents[0] > procents[1])
+            {
+                return   (procents[1] / procents[0]) * 100;
+            }
+            else
+            {
+               return   (procents[0] / procents[1]) * 100;
+            }
+        
 
             }
         private List<Models.ScoreMatches> GetListScoreFromTemplate( IElement template) {
@@ -157,55 +165,7 @@ namespace AnalizeBet.Services.Repositories
 
        
     }
-public static class IDocumentExtension {
-    public static IElement getScoresTemplate(this IDocument angle, string element)
-    {
-        return angle.QuerySelectorAll(element)[1].Children[2];
 
-    }
-}
-    public static class StringExtension {
+  
 
-        public static string Delete( this string sameWord,  string nameDeleteWord) {
-            return sameWord.Replace(nameDeleteWord, "");
-
-        }
-    }
-
-    public static class StringArrayExtension {
-        public static string[] getFromCell(this string[] sameArray, params int[] cellsNumber)
-        {
-            string[] returningArray = new string[cellsNumber.Length ];
-            for(int i = 0;i<cellsNumber.Length;i++){
-
-                returningArray[i] = sameArray[cellsNumber[i]];
-            }
-            return returningArray;
-
-        }
-        public static string[] DeleteAddingScores(this string[] array) {
-            string[] scores = new  string[2]   ;
-            for (int i = 0; i < 2; i++)
-            {
-                if (array[i].Contains("("))
-                {
-
-                    scores[i] = array[i].Split("(")[0];
-                }
-                else
-                {
-                    scores[i] = array[i];
-                }
-            }
-            return scores;
-
-        }
-        public static int[] ToInt(this string[] array) {
-            int[] numberArray = new int[array.Length];
-            for (int i = 0; i < array.Length; i++) {
-                numberArray[i] = int.Parse(array[i]);
-            }
-            return numberArray;
-        }
-    }
 }

@@ -6,7 +6,7 @@ using Xunit;
 
 namespace TestsAnalyzeBest
 {
-    public class UnitTest1
+    public class ScoreRepositoryTests
     {
         [Fact]
         public void Test1()
