@@ -37,8 +37,8 @@ namespace AnalizeBet.Services.Repositories
             wc.Headers.Add ("Content-Type", "application/x-www-form-urlencoded");
              
             wc.Headers.Add ("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
-            string html = wc.DownloadString( requestData.href);
-          
+            string html = wc.DownloadString("https://d.myscore.com.ua/x/feed/d_hh_" + MyScoreServices.GetIdMatch( requestData.href  ) + "_ru_1");
+
             IHtmlDocument angle = new HtmlParser().Parse(html);
             
             List<Models.ScoreMatches> liHomeScores = new List<Models.ScoreMatches>();

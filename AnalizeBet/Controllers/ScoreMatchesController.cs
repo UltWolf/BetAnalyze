@@ -31,6 +31,7 @@ namespace AnalizeBet.Controllers
         public IEnumerable<ScoreMatches> GetScores([FromRoute] MyScoreRequest msc)
         {
             if(msc.href.Contains("www.myscore.com.ua")||msc.href.Contains("www.myscore.com.ru")){
+                 
                 repository.GetScores(msc );
             }
             return _context.Scores;
